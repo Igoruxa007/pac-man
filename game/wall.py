@@ -4,6 +4,7 @@ class Wall(GameObject):
     def __init__(self, topleft_x: int, topleft_y: int, sprite_filename: str):
         super().__init__(topleft_x, topleft_y, sprite_filename)
     
+    @staticmethod
     def calculate_walls_coordinates(screen_width: int, screen_height: int, block_width: int, block_height: int) -> list[tuple[int, int]]:
         horizontal_wall_blocks_amount = screen_width // block_width
         vertical_wall_blocks_amount = screen_height // block_height - 2
