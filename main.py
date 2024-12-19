@@ -9,12 +9,11 @@ from game.apple import Apple
 from game.text import Text
 
 
-def draw_whole_screen(screen: pygame.surface.Surface, score: int, *args: Human|Apple|Ghost|Group) -> None:
+def draw_whole_screen(screen: pygame.surface.Surface, score: int, *args: Human | Apple | Ghost | Group) -> None:
     screen.fill("blue")
     for arg in args:
         arg.draw(screen)
     Text(str(score), (10, 10)).draw(screen)
-
 
 
 def main() -> None:
@@ -45,7 +44,7 @@ def main() -> None:
                     random.randint(Wall.width, screen.get_width() - Wall.width * 2),
                     random.randint(Wall.height, screen.get_height() - Wall.height * 2),
                 )
-        
+
         if pacman.is_collided_with(ghost):
             score = 0
             ghost.rect.topleft = (100, 100)
