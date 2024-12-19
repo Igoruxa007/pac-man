@@ -4,6 +4,7 @@ from pygame.sprite import Group, spritecollide
 from . game_object import GameObject
 from . settings import PLAYER_SPEED
 
+
 class Human(GameObject):
     def __init__(self, topleft_x: int, topleft_y: int, sprite_filename: str):
         super().__init__(topleft_x, topleft_y, sprite_filename)

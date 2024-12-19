@@ -4,12 +4,13 @@ from pygame.sprite import Group, spritecollide
 from . game_object import GameObject
 from . settings import GHOST_SPEED
 
+
 class Ghost(GameObject):
     def __init__(self, topleft_x: int, topleft_y: int, sprite_filename: str):
         super().__init__(topleft_x, topleft_y, sprite_filename)
         self.ghost_speed = GHOST_SPEED
         self.direction = (1, 0)
-    
+
     def change_direction(self) -> None:
         x = choice([-1, 0, 1])
         if x:
